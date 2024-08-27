@@ -14,7 +14,7 @@ class GradeOutputParser(BaseOutputParser):
         """Parse the output of an LLM call."""
         return "wrong" not in text.lower()
 
-chat = ChatOpenAI(openai_api_key=os.getenv("OPENAI"), temperature=0)
+chat = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), temperature=0)
 
 prompt_template_text = """You are a high school history teacher grading \
 homework assignments. Based on the homework question indicated by “**Q:**” \
